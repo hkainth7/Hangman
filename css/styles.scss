@@ -13,19 +13,72 @@ body {
 }
 
 #wrapper {
-    max-width: 850px;
+    max-width: 990px;
     background-color: $secondary-color;
     padding: 10px;
+    border-radius: 5px;
 }
 
 .header {
     padding: 10px;
+    text-align: center;
 
     h1 {
         font-size: 24px;
     }
 }
 
+.hangman-image-container {
+    padding: 10px;
+
+    img {
+        display: block;
+        max-width: 80%;
+        height: auto;
+        margin: 0 auto;
+    }
+    
+    
+}
+
+
+#incorrect-guesses {
+    text-align: center;
+    padding: 10px;
+    background-color: $secondary-color;
+    max-width: 250px;
+    margin: 0 auto;
+    @include standard-border;
+}
+
+#letters-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 450px;
+    margin: 0 auto;
+
+    .alphabet {
+        
+        padding: 15px;
+        margin: 5px;
+        background-color: $secondary-color;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+    .alphabet:hover{
+        @include rounded-shaded-box(0,0,0,black)
+    }
+
+}
+
 .footer{
     font-size: 14px;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 10px;
 }

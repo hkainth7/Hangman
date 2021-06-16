@@ -4,3 +4,16 @@
     justify-content: center;
     align-items: center;
 }
+
+
+@mixin rounded-shaded-box($xoffset, $yoffset, $rounded-corners, $border-color){
+    box-shadow:$xoffset $yoffset 15px #5d5d5d;	  
+    border-radius:$rounded-corners;    
+        
+}
+
+
+@mixin standard-border(){
+    border: 1px solid black;
+    border-radius: 5px;
+}

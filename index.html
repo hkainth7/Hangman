@@ -13,12 +13,12 @@
 <body>
     <div id="wrapper">
         <header class="header">
-            <h1>Hangman</h1>
+            <h1>Hangman Guessing Game</h1>
         </header>
         <main class="main">
             <div class="hangman-image-container">
                 <picture>
-                    
+                    <img src="images/img-0.png" alt="" id="hangman-image">
                 </picture>
             </div>
             <div class="game-container">
@@ -26,7 +26,9 @@
                     <p id="word"></p>
                     <p id="hint"></p>
                </div>
-               <p id="incorrect-guesses"></p>
+               <p id="incorrect-guesses">
+                   Incorrect Guesses: <span id="wrong-guesses">5</span>/6
+               </p>
                <div id="letters-container">
 
                </div>
