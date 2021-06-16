@@ -63,7 +63,6 @@ table {
 body {
   min-height: 100vh;
   font-family: "roboto", sans-serif;
-  font-size: 24px;
   background-color: #293B5F;
   display: flex;
   flex-direction: row;
@@ -75,6 +74,14 @@ body {
   max-width: 850px;
   background-color: #E1E5EA;
   padding: 10px;
+}
+
+.header {
+  padding: 10px;
+}
+
+.header h1 {
+  font-size: 24px;
 }
 
 .footer {

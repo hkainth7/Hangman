@@ -7,7 +7,7 @@
 body {
     min-height: 100vh;
     font-family: $font;
-    font-size: 24px;
+    
     background-color: $primary-color;
     @include centered-flex-item;
 }
@@ -16,6 +16,14 @@ body {
     max-width: 850px;
     background-color: $secondary-color;
     padding: 10px;
+}
+
+.header {
+    padding: 10px;
+
+    h1 {
+        font-size: 24px;
+    }
 }
 
 .footer{
