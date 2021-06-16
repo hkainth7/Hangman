@@ -5,8 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hangman</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="scripts/main.js" defer="defer"></script>
 </head>
 <body>
-    
+    <div id="wrapper">
+        <header class="header">
+            <h1>Hangman</h1>
+        </header>
+        <main class="main">
+            <div class="hangman-image-container">
+                <picture>
+                    <img src="" alt="">
+                </picture>
+            </div>
+            <div class="game-container">
+               <div class="word-container">
+                    <p id="word"></p>
+                    <p id="hint"></p>
+               </div>
+               <p id="incorrect-guesses"></p>
+               <div id="letters-container">
+
+               </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <p>
+                Guess a letter from the hidden word! Beware you have limited number of chances to guess the word and save the stick man from meeting his doom!
+            </p>
+        </footer>
+    </div>
 </body>
 </html>
