@@ -59,3 +59,24 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+body {
+  min-height: 100vh;
+  font-family: "roboto", sans-serif;
+  font-size: 24px;
+  background-color: #293B5F;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#wrapper {
+  max-width: 850px;
+  background-color: #E1E5EA;
+  padding: 10px;
+}
+
+.footer {
+  font-size: 14px;
+}
