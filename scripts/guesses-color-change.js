@@ -1,6 +1,3 @@
-
-
-
 function guessesColorChange(){
 
     const guessContainer = document.getElementById("incorrect-guesses");
