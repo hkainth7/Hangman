@@ -1,6 +1,8 @@
 const winningImage = document.getElementById('win-image');
 const losingImage = document.getElementById('losing-image');
+const hangmanImage = document.getElementById('hangman-image');
 
+hangmanImage.src = 'images/img-0.png';
 winningImage.src = 'images/celebration.jpg'
 losingImage.src = 'images/sauron.jpg';
 
