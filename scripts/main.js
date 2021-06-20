@@ -1,3 +1,10 @@
+const winningImage = document.getElementById('win-image');
+const losingImage = document.getElementById('losing-image');
+
+winningImage.src = 'images/celebration.jpg'
+losingImage.src = 'images/sauron.jpg';
+
+
 addAlphabet();
 guessesColorChange();
 

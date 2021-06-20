@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
     <script src="scripts/add-aplphabet-buttons.js" defer="defer"></script>
     <script src="scripts/guesses-color-change.js" defer="defer"></script>
     <script src="scripts/main.js" defer="defer"></script>
@@ -15,9 +17,15 @@
 <body>
     <div id="wrapper">
         <header class="header">
-            <h1>Hangman Guessing Game</h1>
+            <h1>Saving Frodo: Hangman</h1>
         </header>
         <main class="main">
+            <p>
+                Help Frodo escape the tower of Cirith Ungol, where he's taken captive after being pricked by Shelob's paralyzing sting.
+            </p>
+            <p>
+                Sam is lost and you are Frodo's only hope in completing his quest to take the One Ring and cast it in to Mount Doom in the heart of Mordor.
+            </p>
             <div class="hangman-image-container">
                 <picture>
                     <img src="images/img-0.png" alt="" id="hangman-image">
@@ -37,25 +45,38 @@
             </div>
         </main>
         <footer class="footer">
-            <p>
-                Guess a letter from the hidden word! Beware you have limited number of chances to guess the word and save the stick man from meeting his doom!
-            </p>
+            <small>
+                Guess a letter from the hidden word! Beware you have a limited number of chances to guess the word and save our friend from meeting their doom!
+            </small>
         </footer>
         <div id="you-won">
-            <picture>
-                <img src="" alt="">
-            </picture>
             <h2>Congratulations You Win!</h2>
+            <p>
+                The lands of Middle Earth are saved because
+                of your heroics. Join the celebrations! 
+            </p>
+            <picture>
+                <img id="win-image" src="" alt="">
+            </picture>
+            <p>
+                Play again to relive the adventure!
+            </p>
             <button id="play-again">
                 Play Again
             </button>
         </div>
-        <div id="try-again">
+        <div id="you-lose">
+            <p>
+                You let the our friend perish, and now Sauron has taken over the lands of Middle Earth! 
+            </p>
             <picture>
-                <img src="" alt="">
+                <img id="losing-image" src="" alt="">
             </picture>
+            <p>
+                Play again to save Middle Earth! 
+            </p>
             <button id="try-again">
-                Try Again
+                Play Again
             </button>
         </div>
     </div>
