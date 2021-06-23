@@ -76,11 +76,12 @@ window.addEventListener('load', function(){
 
             buttons[i].addEventListener('click', function(){
                 letter = buttons[i].innerHTML.toLowerCase();
-                
+                buttons[i].disabled = true;
                 if(data.word.includes(letter)){
                     console.log(letter);
                     for(let i = 0; i < data.word.length; i++){
                         if(letter == data.word[i]){
+                            
                             answerArray[i] = letter;
                             wordOutput.innerHTML = answerArray.join(" ");
                             remainingLetters--;
