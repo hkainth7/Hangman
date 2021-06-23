@@ -1,15 +1,20 @@
+addAlphabet();
+
 const winningImage = document.getElementById('win-image');
 const losingImage = document.getElementById('losing-image');
 const hangmanImage = document.getElementById('hangman-image');
 const wordOutput = document.getElementById('word');
-const hintOutput = document.getElementById('hint'); 
+const hintOutput = document.getElementById('hint');
+const buttons = document.getElementsByClassName('alphabet'); 
+const guessedLetters = [];
 
 hangmanImage.src = 'images/img-0.png';
 winningImage.src = 'images/celebration.jpg'
 losingImage.src = 'images/sauron.jpg';
 
 
-addAlphabet();
+
+
 guessesColorChange();
 
 const wrongGuesses = document.getElementById("wrong-guesses");
@@ -17,7 +22,9 @@ wrongGuesses.innerText = 0;
 
 const fetchFileURL = 'data/json/words.json';
 
-fetch(fetchFileURL)
+window.addEventListener('load', function(){
+
+    fetch(fetchFileURL)
     .then(function(response){
         console.log('response ok');
         if(response.ok){
@@ -35,17 +42,43 @@ fetch(fetchFileURL)
 
             word: data.word,
             hint: data.hint
-            
 
         }
 
         wordOutput.innerHTML = Word.word;
         hintOutput.innerText = Word.hint;
+
+        return data;
+    })
+
+    .then(function(data){
+        const answerArray = []
+        
+        for(let i = 0; i < data.word.length; i++){
+            answerArray[i] = '_';
+            const str = answerArray.join(' ');
+            wordOutput.innerHTML = str;
+        }
+
+        
+        for(let i = 0; i < buttons.length; i++){
+
+            buttons[i].addEventListener('click', function(){
+                guessedLetters.push(buttons[i].innerHTML);
+                console.log(guessedLetters);
+            })
+        
+        }
+        
+        
+        
     })
     .catch(function(){
         console.log('error with response');
     });
     
+})
+
 
 
 

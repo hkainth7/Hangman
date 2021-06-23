@@ -54,6 +54,20 @@ img {
     
 }
 
+.word-container {
+    text-align: center;
+
+    #word {
+        font-size: 24px;
+        letter-spacing: 3px;
+    }
+
+    #hint {
+        font: 14px;
+        letter-spacing: 1px;
+    }
+}
+
 
 #incorrect-guesses {
     font-weight: bold;

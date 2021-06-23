@@ -110,6 +110,20 @@ img {
   margin: 0 auto;
 }
 
+.word-container {
+  text-align: center;
+}
+
+.word-container #word {
+  font-size: 24px;
+  letter-spacing: 3px;
+}
+
+.word-container #hint {
+  font: 14px;
+  letter-spacing: 1px;
+}
+
 #incorrect-guesses {
   font-weight: bold;
   font-size: 18px;
