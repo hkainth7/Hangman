@@ -10,7 +10,7 @@ const hintOutput = document.getElementById('hint');
 const buttons = document.getElementsByClassName('alphabet'); 
 const tryAgain = document.getElementById('try-again');
 const playAgain = document.getElementById('play-again');
-const delay = 1000;
+const delay = 150;
 let guessedLetters = [];
 let str = "";
 let imageSrc = 0;
@@ -85,8 +85,11 @@ window.addEventListener('load', function(){
                             wordOutput.innerHTML = answerArray;
                             remainingLetters--;
                             if(remainingLetters == 0){
-                                youWon.style.display = "block";
                                 hangmanImage.style.display = "none";
+                                setTimeout(function(){
+                                    $("#you-won").fadeIn("slow");
+                                },delay)
+                                
                             }
                         }
                     }
@@ -99,8 +102,8 @@ window.addEventListener('load', function(){
                     if(wrongGuesses.innerText == 6){
                         hangmanImage.style.display = "none";
                         setTimeout(function(){
-                            youLost.style.display = "block";
-                        }, delay)
+                            $("#you-lose").fadeIn("slow");
+                        },delay)
                         
                     }
                     
