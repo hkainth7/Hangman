@@ -62,7 +62,7 @@ table {
 
 body {
   min-height: 100vh;
-  font-family: "MedievalSharp", cursive;
+  font-family: "Yatra One", cursive;
   background-color: #293B5F;
   display: flex;
   flex-direction: row;
@@ -75,7 +75,7 @@ body p {
   margin: 0 auto;
   padding: 8px 12px;
   line-height: 1.4;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 img {
@@ -87,7 +87,6 @@ img {
 #wrapper {
   max-width: 990px;
   background-color: #E1E5EA;
-  padding: 10px;
   border-radius: 5px;
 }
 
@@ -98,10 +97,6 @@ img {
 
 .header h1 {
   font-size: 24px;
-}
-
-.hangman-image-container {
-  padding: 10px;
 }
 
 .hangman-image-container img {
@@ -115,13 +110,15 @@ img {
 }
 
 .word-container #word {
-  font-size: 24px;
+  font-size: 20px;
   letter-spacing: 3px;
+  padding: 4px;
 }
 
 .word-container #hint {
-  font: 8px;
+  font-size: 16px;
   letter-spacing: 1px;
+  padding: 4px;
 }
 
 #incorrect-guesses {
@@ -129,7 +126,7 @@ img {
   font-size: 14px;
   text-align: center;
   letter-spacing: 2px;
-  padding: 10px;
+  padding: 4px;
   background-color: #E1E5EA;
   max-width: 300px;
   margin: 0 auto;
@@ -147,7 +144,7 @@ img {
 }
 
 #letters-container .alphabet {
-  font-family: "MedievalSharp", cursive;
+  font-family: "Yatra One", cursive;
   padding: 15px;
   margin: 5px;
   background-color: #E1E5EA;

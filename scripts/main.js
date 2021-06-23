@@ -10,7 +10,7 @@ const hintOutput = document.getElementById('hint');
 const buttons = document.getElementsByClassName('alphabet'); 
 const tryAgain = document.getElementById('try-again');
 const playAgain = document.getElementById('play-again');
-const delay = 150;
+const delay = 200;
 let guessedLetters = [];
 let str = "";
 let imageSrc = 0;
@@ -82,7 +82,7 @@ window.addEventListener('load', function(){
                     for(let i = 0; i < data.word.length; i++){
                         if(letter == data.word[i]){
                             answerArray[i] = letter;
-                            wordOutput.innerHTML = answerArray;
+                            wordOutput.innerHTML = answerArray.join(" ");
                             remainingLetters--;
                             if(remainingLetters == 0){
                                 hangmanImage.style.display = "none";

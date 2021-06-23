@@ -30,5 +30,25 @@
     {
         "word": "bugsbunny",
         "hint": "what's up doc"
+    },
+
+    {
+        "word": "soccer",
+        "hint": "global sport"
+    },
+
+    {
+        "word": "water",
+        "hint": "essential for survival"
+    },
+
+    {
+        "word": "puppy",
+        "hint": "they love, nip, and poop everywhere"
+    },
+
+    {
+        "word": "money",
+        "hint": "green, makes the world turn"
     }
 ]
