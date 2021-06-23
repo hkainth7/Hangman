@@ -5,7 +5,7 @@ function guessesColorChange(){
 
     if(incorrectGuessCounter.textContent < 2){
         guessContainer.style.backgroundColor = "#E1E5EA";
-    } else if(incorrectGuessCounter.textContent > 2 && incorrectGuessCounter.textContent < 5) {
+    } else if(incorrectGuessCounter.innerText >= 2 && incorrectGuessCounter.innerText < 5) {
         guessContainer.style.backgroundColor = "#F5A962";
     }else{
         guessContainer.style.backgroundColor = "red";
