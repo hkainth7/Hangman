@@ -10,7 +10,8 @@ const hintOutput = document.getElementById('hint');
 const buttons = document.getElementsByClassName('alphabet'); 
 const tryAgain = document.getElementById('try-again');
 const playAgain = document.getElementById('play-again');
-const delay = 200;
+const delayLoss = 1000;
+const delayWin = 250;
 let guessedLetters = [];
 let str = "";
 let imageSrc = 0;
@@ -60,27 +61,31 @@ window.addEventListener('load', function(){
     })
 
     .then(function(data){
+
         const answerArray = []
         let remainingLetters = data.word.length;
+        let word = data.word;
         
-        for(let i = 0; i < data.word.length; i++){
+        for(let i = 0; i < remainingLetters; i++){
             answerArray[i] = '_';
-            const str = answerArray.join(' ');
-            wordOutput.innerHTML = str;
         }
 
-        
-        
+        const str = answerArray.join(' ');
+        wordOutput.innerHTML = str;
         
         for(let i = 0; i < buttons.length; i++){
 
             buttons[i].addEventListener('click', function(){
-                letter = buttons[i].innerHTML.toLowerCase();
-                buttons[i].disabled = true;
-                if(data.word.includes(letter)){
-                    console.log(letter);
-                    for(let i = 0; i < data.word.length; i++){
-                        if(letter == data.word[i]){
+                
+                let letter = buttons[i].innerHTML.toLowerCase();
+                let button = buttons[i];
+                button.disabled = true;
+
+                if(word.includes(letter)){
+                    
+                    for(let i = 0; i < word.length; i++){
+
+                        if(letter == word[i]){
                             
                             answerArray[i] = letter;
                             wordOutput.innerHTML = answerArray.join(" ");
@@ -89,7 +94,7 @@ window.addEventListener('load', function(){
                                 hangmanImage.style.display = "none";
                                 setTimeout(function(){
                                     $("#you-won").fadeIn("slow");
-                                },delay)
+                                },delayWin);
                                 
                             }
                         }
@@ -101,10 +106,11 @@ window.addEventListener('load', function(){
                     imageSrc++
                     hangmanImage.src = `images/img-${imageSrc}.png`;
                     if(wrongGuesses.innerText == 6){
+                        wordOutput.innerHTML = word;
                         hangmanImage.style.display = "none";
                         setTimeout(function(){
                             $("#you-lose").fadeIn("slow");
-                        },delay)
+                        },delayLoss);
                         
                     }
                     
